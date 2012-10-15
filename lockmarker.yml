@@ -1,0 +1,23 @@
+rabbitmq:
+    host: 15.185.168.162
+    port: 5672
+    user: hong
+    password: hong1234
+    vhost: /
+
+logging:
+  level: INFO
+
+  loggers:
+    "com.lockmarker": DEBUG
+
+  file:
+    enabled: true
+    threshold: ALL
+    currentLogFilename: /var/log/lockmarker/lockmarker.log
+    archivedLogFilenamePattern: /var/log/lockmarker/lockmarker-%d.log.gz
+    archivedFileCount: 5
+    timeZone: UTC
+
+template: lockmarker
+

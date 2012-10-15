@@ -33,7 +33,7 @@ Run
 
     [nix:~]$ mvn test
 
-* To execute interation test, make sure the server up running on localhost and run::
+#. To execute interation test, make sure the server up running on localhost and run::
 
     [nix:~]$ mvn integration-test 
 
