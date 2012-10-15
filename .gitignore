@@ -1,0 +1,11 @@
+*.class
+*.t
+*.d.*
+*.i.*
+.test/
+.idea/
+.classpath
+.project
+.settings/
+target/
+.DS_Store
