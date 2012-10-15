@@ -1,8 +1,8 @@
 rabbitmq:
-    host: 15.185.168.162
+    host: 8.8.8.8
     port: 5672
-    user: hong
-    password: hong1234
+    user: guest
+    password: guest
     vhost: /
 
 logging:
