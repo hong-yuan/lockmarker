@@ -31,7 +31,7 @@ public class ServiceShutdownTask extends Task {
 
     @Override
     public void execute(ImmutableMultimap<String, String> parameters, PrintWriter output) {
-        output.println("Shutting down Messaging Service...");
+        output.println("Shutting down LockMarker Service...");
         output.flush();
         runtime.exit(0);
     }
