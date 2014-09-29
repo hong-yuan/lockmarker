@@ -16,19 +16,15 @@ Build
 Run
 ---
 
-#. To start the server, go to the project root directory (the directory of pom.xml) and run::
-
+1. To start the server, go to the project root directory (the directory of pom.xml) and run:
     ```java -jar target/lockmarker-0.0.1.jar server lockmarker.yml```
 
-#. To run the client CLI, make sure the above service is up and run::
-
+2. To run the client CLI, make sure the above service is up and run:
     ```java -jar target/lockmarker-0.0.1-client.jar```
 
-#. To execute unit tests, run::
-
+3. To execute unit tests, run:
     ```mvn test```
 
-#. To execute interation test, make sure the server up running on localhost and run::
-
+4. To execute interation test, make sure the server up running on localhost and run:
     ```mvn integration-test``` 
 
