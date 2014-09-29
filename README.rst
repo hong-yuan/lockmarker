@@ -1,23 +1,18 @@
-==========
 LockMarker
 ==========
 
--------------
-Prerequisites
--------------
+Dependencies
+------------
 
-* Eclipse IDE (JEE Developers version will be best)
 * Maven
 * Dropwizard
 
------
 Build
 -----
 
-* To build the API Server, run 'mvn clean package' and get the lockmarker-0.0.1.jar.
-* To build the service client CLI, run 'mvn assembly:assembly' and get build lockmarker-0.0.1-client.jar.
+* To build the API Server, run ```mvn clean package``` and get the lockmarker-0.0.1.jar.
+* To build the service client CLI, run ```mvn assembly:assembly``` and get build lockmarker-0.0.1-client.jar.
 
----
 Run
 ---
 

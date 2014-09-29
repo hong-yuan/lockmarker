@@ -1,8 +1,5 @@
 package com.lockmarker;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import com.google.inject.AbstractModule;
 import com.google.inject.Guice;
 import com.google.inject.Inject;
@@ -13,13 +10,10 @@ import com.lockmarker.api.application.rabbitmq.RabbitMQDispatcher;
 import com.lockmarker.config.MessagingConfiguration;
 import com.lockmarker.health.TemplateHealthCheck;
 import com.lockmarker.resources.LockMarkerResource;
-import com.lockmarker.resources.FeedListenerResource;
 import com.yammer.dropwizard.Service;
 import com.yammer.dropwizard.config.Environment;
 
-
 public class LockMarkerService extends Service<MessagingConfiguration> {
-	private MessagingDispatcher dispatcher;
 
 	public static void main(String[] args) throws Exception {
 		Injector injector = Guice.createInjector(new AbstractModule() {
@@ -42,8 +36,7 @@ public class LockMarkerService extends Service<MessagingConfiguration> {
 
 	@Inject
 	private LockMarkerService(MessagingDispatcher dispatcher) {
-		super("messaging-as-a-service");
-		this.dispatcher = dispatcher;
+		super("LockMarker Service");
 	}
 
 	@Override
@@ -52,9 +45,7 @@ public class LockMarkerService extends Service<MessagingConfiguration> {
 		try {
 			final String template = configuration.getTemplate();
 			environment.addHealthCheck(new TemplateHealthCheck(template));
-            dispatcher.loadConfiguration(configuration);
-            environment.addResource(new LockMarkerResource(dispatcher));
-            environment.addResource(new FeedListenerResource());
+            environment.addResource(new LockMarkerResource());
 			environment.addTask(new ServiceShutdownTask());
 		} catch (Exception e) {
 			e.printStackTrace();

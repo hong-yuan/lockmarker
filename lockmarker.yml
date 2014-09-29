@@ -19,5 +19,5 @@ logging:
     archivedFileCount: 5
     timeZone: UTC
 
-template: lockmarker
+template: lockmarker %s
 
